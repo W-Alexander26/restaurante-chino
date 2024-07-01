@@ -1,0 +1,107 @@
+{
+  "users": [
+    {
+      "id": "4c5c",
+      "nombre": "Alex",
+      "email": "alexander@gmail.com",
+      "password": "12345"
+    },
+    {
+      "id": "da1c",
+      "nombre": "Alex",
+      "email": "aguilar@gmail.com",
+      "password": "12345"
+    },
+    {
+      "id": "8994",
+      "nombre": "Wilfredo",
+      "email": "wil@gmail.com",
+      "password": "12345"
+    },
+    {
+      "id": "c588",
+      "nombre": "javier",
+      "email": "jav@gmail.com",
+      "password": "12345"
+    },
+    {
+      "id": "2f38",
+      "nombre": "   ",
+      "email": "    ",
+      "password": "     "
+    },
+    {
+      "id": "12fc",
+      "nombre": "Juana",
+      "email": "Arco",
+      "password": "1234"
+    },
+    {
+      "id": "b094",
+      "nombre": "",
+      "email": "      ",
+      "password": " jjjk"
+    },
+    {
+      "id": "f104",
+      "nombre": "   ",
+      "email": "  ",
+      "password": "cxc xc x"
+    },
+    {
+      "id": "2df3",
+      "nombre": "",
+      "email": "",
+      "password": "     "
+    },
+    {
+      "id": "e6b0",
+      "nombre": "       ",
+      "email": "     klomo",
+      "password": " "
+    },
+    {
+      "id": "3d63",
+      "nombre": "",
+      "email": "c,odpcpx",
+      "password": "o ,cxopc "
+    },
+    {
+      "id": "9523",
+      "nombre": "Dross",
+      "email": "dross@gmail.com",
+      "password": "dross"
+    },
+    {
+      "id": "888c",
+      "nombre": "niconis",
+      "email": "    osxpo",
+      "password": "xmspm"
+    },
+    {
+      "id": "7f08",
+      "nombre": "Debe",
+      "email": "ropa@gmail.com",
+      "password": "ropero"
+    },
+    {
+      "id": "19f3",
+      "nombre": "Julio",
+      "email": "cortazar@gmail.com",
+      "password": "deber"
+    },
+    {
+      "id": "d089",
+      "nombre": "Dober",
+      "correo": "Ranger@gmail.com",
+      "contrasena": "12345"
+    }
+  ],
+  "productos": [
+    {
+      "categoria": "",
+      "precio": "",
+      "id": "ddd5"
+    }
+  ]
+}
