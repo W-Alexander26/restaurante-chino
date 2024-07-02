@@ -1,30 +1,30 @@
 import { useState } from "react";
-import axios from "axios";
+import obtenerInformacionDatos from "../services/llamados";
 
 const logingForm = () => {
+  //creamos una función que va a validar que el usuario que se vaya a logear, exista y en caso positivo será redirigido al mainpage.
   const [correo, setCorreo] = useState("");
   const [contrasena, setContresena] = useState("");
 
   const obtenerDatos = async () => {
+    if (correo.trim() === "" || contrasena.trim() === "") {
+      alert("No olvides llenar todos los recuadros");
+      return; //si está condición no se cumple, se termina.
+    }
     try {
-      const url = "http://localhost:3001/users";
-      const response = await axios.get(url);
-      const usuarios = response.data;
-      const usersData = usuarios.find(
+      const usuarios = await obtenerInformacionDatos();
+      const usuariosRegistrado = usuarios.find(
+        //utilizamos el metodo find para validar que al logearse, esa información exista antes.
         (usuario) =>
-          usuario.email === correo && usuario.contrasena === contrasena
+          usuario.correo === correo && usuario.contrasena === contrasena
       );
-      if (correo.trim() === "" && contrasena.trim() === "") {
-        alert(
-          "Recuerda usar la misma usar la misma informaición que usaste en el regstro"
-        );
-      } else if (usersData) {
-        alert("Ingreso correctamente");
+      if (usuariosRegistrado) {
+        alert("Datos correctos, en breve será dirigido a la página de inicio");
       } else {
-        alert("Hola");
+        alert("Hubo un error con los datos, intentelo de nuevo");
       }
     } catch (error) {
-      console.error("Error al cargar datos:", error);
+      alert("Problemas al subir datos", error);
     }
   };
 
@@ -34,7 +34,7 @@ const logingForm = () => {
         <p>Login</p>
       </div>
       <p>Correo</p>
-      <input
+      <input //le damos a cada input las propiedadades necesarias para utilizarlas y al botón le enviamos la función.
         onChange={(e) => setCorreo(e.target.value)}
         type="text"
         placeholder="Ingrese correo"
