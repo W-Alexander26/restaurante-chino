@@ -1,12 +1,14 @@
-import React from 'react'
-import Home from '../components/homeStructure'
+import React from "react";
+import HomeNav from "../components/HomeStructures/homeNav";
+import HomeCarousel from "../components/HomeStructures/homeCarousel";
 
 const home = () => {
   return (
     <div>
-      <Home/>
+      <HomeNav />
+      <HomeCarousel />
     </div>
-  )
-}
+  );
+};
 
-export default home
+export default home;
