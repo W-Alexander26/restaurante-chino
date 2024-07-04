@@ -1,10 +1,21 @@
-import React from "react";
-import Product from "../components/productsStructures";
+import React, { useState } from "react";
+import ProductNav from "../components/ProductStructure/productsNav";
+import ProductsMainContent from "../components/ProductStructure/productsMainContent";
+import ProductsForm from "../components/ProductStructure/productsForm";
 
 function productPage() {
+  const [searched, setSearched] = useState([]);
+
+  const actualizarSearched = (resultadoBusqueda) => {
+    setSearched(resultadoBusqueda);
+  };
   return (
     <div>
-      <Product />
+      <ProductNav />
+      <ProductsForm actualizarSearched={actualizarSearched} />
+      <br />
+      <ProductsMainContent productos={searched} />
+      <br />
     </div>
   );
 }

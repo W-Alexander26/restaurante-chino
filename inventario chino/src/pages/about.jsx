@@ -1,10 +1,14 @@
 import React from "react";
-import About from "../components/aboutStructure";
+import AboutNav from "../components/AboutStructures/aboutNavStructure";
+import AboutMainContent from "../components/AboutStructures/aboutMainContent";
+import Footer from "../components/HomeStructures/footer/footer";
 
 function about() {
   return (
     <div>
-      <About />
+      <AboutNav />
+      <AboutMainContent />
+      <Footer />
     </div>
   );
 }

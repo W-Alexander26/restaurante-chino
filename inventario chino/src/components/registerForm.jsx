@@ -1,5 +1,5 @@
 import React, { useState } from "react"; // importamos de la librería de react, el hook que nos va a permitir manipular el estado de la variable.
-import obtenerInformacionDatos from "../services/llamados"; // importamos a la función que tiene el llamado al json server.
+import { obtenerInformacionDatos } from "../services/llamados"; // importamos a la función que tiene el llamado al json server.
 import axios from "axios"; //importamos axios desde la librería de axios
 
 const Register = () => {

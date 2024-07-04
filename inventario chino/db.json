@@ -97,11 +97,5 @@
       "contrasena": "12345"
     }
   ],
-  "productos": [
-    {
-      "categoria": "",
-      "precio": "",
-      "id": "ddd5"
-    }
-  ]
+  "productos": []
 }
