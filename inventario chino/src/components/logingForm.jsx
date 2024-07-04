@@ -1,5 +1,5 @@
 import { useState } from "react";
-import obtenerInformacionDatos from "../services/llamados";
+import { obtenerInformacionDatos } from "../services/llamados";
 
 const logingForm = () => {
   //creamos una función que va a validar que el usuario que se vaya a logear, exista y en caso positivo será redirigido al mainpage.

@@ -1,0 +1,22 @@
+#onetext-twoimgs {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  height: auto;
+  background-color: black;
+}
+#textoChino {
+  font-size: 38px;
+  color: white;
+  text-align: center;
+}
+
+#rolls {
+  margin-top: 50px;
+  height: 280px;
+  width: 290px;
+}
+
+#comidaVariada {
+  height: 280px;
+  width: 290px;
+}

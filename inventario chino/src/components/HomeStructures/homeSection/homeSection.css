@@ -1,0 +1,22 @@
+#twoimg-onetext {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  height: auto;
+  background-color: black;
+}
+
+#carton {
+  margin-top: 50px;
+  width: 290px;
+  height: 280px;
+}
+#platoComida {
+  margin-top: 20px;
+  width: 290px;
+  height: 280px;
+}
+#textoChino {
+  font-size: 38px;
+  text-align: center;
+  color: white;
+}

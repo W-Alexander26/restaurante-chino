@@ -1,0 +1,9 @@
+#contenedorAbout {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  background-color: black;
+}
+#textabout{
+  color: white;
+  font-size: 22px;
+}
