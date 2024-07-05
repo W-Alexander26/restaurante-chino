@@ -7,7 +7,6 @@ const productsForm = ({ actualizarSearched }) => {
   const [categoriaProducto, setCategoriaProducto] = useState("");
   const [precioProducto, setPrecioProducto] = useState("");
   const [descripcionProducto, setDescripcionProducto] = useState("");
-  const [buscarProductos, setBuscarProductos] = useState("");
 
   const buscador = async () => {
     const data = await obtenerInformacionProductos();
@@ -22,6 +21,10 @@ const productsForm = ({ actualizarSearched }) => {
   };
 
   const subirDatosProductos = async () => {
+    setNombreProducto("");
+    setCategoriaProducto("");
+    setPrecioProducto("");
+    setDescripcionProducto("");
     // dentro de la función de registro de producto vamos a crear otra función que valide los espacios vacios y al estar todo correcto. Admitira el ingreso de los nuevos productos.
     if (
       nombreProducto.trim() === "" ||
@@ -81,14 +84,6 @@ const productsForm = ({ actualizarSearched }) => {
         id="descripcion"
         placeholder="Descripción"
         onChange={(e) => setDescripcionProducto(e.target.value)}
-      />
-      <input
-        type="text"
-        name="buscarTareas"
-        value={buscarProductos}
-        id="buscarProductos"
-        placeholder="Buscar Productos"
-        onChange={(e) => setBuscarProductos(e.target.value)}
       />
       <button onClick={buscador}>Buscar Productos</button>
       <button onClick={subirDatosProductos}>Agregar Producto</button>

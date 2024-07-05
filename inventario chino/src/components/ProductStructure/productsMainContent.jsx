@@ -26,6 +26,35 @@ const productsMainContent = ({ productos1 }) => {
   mostrarProductos();
   return (
     <div>
+      <div>
+        {productos1.map((producto, index) => (
+          <Card key={index} style={{ width: "18rem", margin: "10px" }}>
+            <Card.Img
+              variant="top"
+              src="https://cdn.sanity.io/images/ph1nl998/production/6f9f3a893db52f051b4c9264b62d90981cab0851-1200x720.jpg"
+            />
+            <Card.Body>
+              <Card.Title>Nombre: {producto.nombre}</Card.Title>
+            </Card.Body>
+            <ListGroup className="list-group-flush">
+              <ListGroup.Item>Categoría: {producto.categoria}</ListGroup.Item>
+              <ListGroup.Item>Precio: {producto.precio}</ListGroup.Item>
+            </ListGroup>
+            <Card.Body style={{ width: "auto" }}>
+              Descripción: {producto.descripcion}
+            </Card.Body>
+            <button>Editar</button>
+            <button
+              onClick={() => {
+                eliminarProducto(producto.id);
+              }}
+            >
+              Eliminar
+            </button>
+          </Card>
+        ))}
+      </div>
+
       {productos.map((producto, index) => (
         <Card key={index} style={{ width: "18rem", margin: "10px" }}>
           <Card.Img

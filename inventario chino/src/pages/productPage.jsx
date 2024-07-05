@@ -14,7 +14,8 @@ function productPage() {
       <ProductNav />
       <ProductsForm actualizarSearched={actualizarSearched} />
       <br />
-      <ProductsMainContent productos={searched} />
+      <ProductsMainContent productos1={searched} />
+      
       <br />
     </div>
   );
