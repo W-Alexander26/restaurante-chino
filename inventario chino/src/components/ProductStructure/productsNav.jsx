@@ -18,9 +18,7 @@ const product = () => {
               <NavDropdown title="Cuenta" id="basic-nav-Cuenta">
                 <NavDropdown.Item href="/register">Registrate</NavDropdown.Item>
                 <NavDropdown.Item href="/login">Inicia sesión</NavDropdown.Item>
-                <NavDropdown.Item href="/product">
-                  Productos
-                </NavDropdown.Item>
+                <NavDropdown.Item href="/product">Productos</NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="#action/3.4">Hola</NavDropdown.Item>
               </NavDropdown>

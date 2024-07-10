@@ -3,6 +3,7 @@
   grid-template-columns: 33% 33% 33%;
   height: auto;
   background-color: black;
+  padding: 10px;
 }
 #textoChino {
   font-size: 38px;

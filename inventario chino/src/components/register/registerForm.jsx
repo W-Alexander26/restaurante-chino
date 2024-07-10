@@ -1,9 +1,12 @@
 import React, { useState } from "react"; // importamos de la librería de react, el hook que nos va a permitir manipular el estado de la variable.
-import { obtenerInformacionDatos } from "../services/llamados"; // importamos a la función que tiene el llamado al json server.
+import { useNavigate } from "react-router-dom";
+import { obtenerInformacionDatos } from "../../services/llamados"; // importamos a la función que tiene el llamado al json server.
+import "./registerForm.css";
 import axios from "axios"; //importamos axios desde la librería de axios
 
 const Register = () => {
   //declaramos un arrow function de registro con las variables necesarias de los inputs para manipular su contenido.
+  const navigate = useNavigate();
   const [nombre, setNombre] = useState("");
   const [correo, setCorreo] = useState("");
   const [contrasena, setContresena] = useState("");
@@ -38,6 +41,7 @@ const Register = () => {
       const url = "http://localhost:3001/users"; // declaramos una variable que contendrá la url del json server
       const response = await axios.post(url, infoUsuarios); // declaramos otra variable que va a contener la promesa axios
       alert("Usuario registrado correctamente", response.data);
+      navigate("/login")
     } catch (error) {
       console.error("Ha habido un error en la introducción de datos", error);
       alert("Error al reistrarse");
@@ -45,14 +49,13 @@ const Register = () => {
   };
 
   return (
-    <div>
-      <div>
-        <p>Registro</p>
-      </div>
-      <p>Nombre</p>
+    <div id="div-inputs">
+      <h1 className="titulo">Registro</h1>
+
       <input // dentro de cada input le daremos son propiedad necesarias para poder usarlos y al botón le enviaremos la función a ejecutar cada vez que se de click.
         name="nombre"
         value={nombre}
+        className="inputs"
         type="text"
         placeholder="Ingrese Nombre"
         onChange={(e) => setNombre(e.target.value)}
@@ -63,17 +66,18 @@ const Register = () => {
         placeholder="Ingrese Correo"
         name="correo"
         value={correo}
+        className="inputs"
         onChange={(e) => setCorreo(e.target.value)}
       />
-      <p>Contreseña</p>
       <input
         type="password"
         placeholder="Ingrese Contraseña"
         name="contrasena"
         value={contrasena}
+        className="inputs"
         onChange={(e) => setContresena(e.target.value)}
       />
-      <button onClick={subirDatos}>Registrarse</button>
+      <button className="boton" onClick={subirDatos}>Registrarse</button>
     </div>
   );
 };
