@@ -19,11 +19,6 @@ body {
   box-shadow: 7px 13px 37px #000;
 }
 .titulo {
-  /* background: linear-gradient(
-    150deg,
-    rgba(224, 58, 13, 1) 0%,
-    rgba(255, 237, 30, 1) 99%
-  ); */
   color: white;
 }
 .inputs {

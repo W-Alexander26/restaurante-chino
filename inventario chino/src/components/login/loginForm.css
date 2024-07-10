@@ -1,0 +1,19 @@
+.div-inputs-login{
+  width: 400px;
+  background: linear-gradient(158deg, rgba(18,18,18,1) 0%, rgba(22,11,0,1) 92%);
+  background-color: black;
+  padding: 30px;
+  margin: auto;
+  margin-top: 40px;
+  border-radius: 4px;
+  box-shadow: 7px 13px 37px #000;
+}
+
+.inputs-login{
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  font-size: 18px;
+  border: solid 2px black;
+}
