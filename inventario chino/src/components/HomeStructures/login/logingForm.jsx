@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useNavigate } from "react";
 import { obtenerInformacionDatos } from "../services/llamados";
 
 const logingForm = () => {

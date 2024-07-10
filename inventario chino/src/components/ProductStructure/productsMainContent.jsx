@@ -4,14 +4,16 @@ import ListGroup from "react-bootstrap/ListGroup";
 import {
   obtenerInformacionProductos,
   borrarProductos,
+  editarProductos,
 } from "../../services/llamados";
 
 const productsMainContent = ({ productos1 }) => {
   const [productos, setProductos] = useState([]);
-  const eliminarProducto = async (id) => {
-    await borrarProductos(id); // llamar  a la funcion para elimina
-    setProductos(productos.filter((element) => element.id !== id));
-  };
+
+  useEffect(() => {
+    mostrarProductos();
+  }, []);
+  // mostrarProductos();
   const mostrarProductos = async () => {
     try {
       const data = await obtenerInformacionProductos();
@@ -20,10 +22,19 @@ const productsMainContent = ({ productos1 }) => {
       console.error("Ha ocurrido un error para obtener los datos", error);
     }
   };
-  useEffect(() => {
-    mostrarProductos();
-  }, []);
-  mostrarProductos();
+
+  const eliminarProducto = async (id) => {
+    await borrarProductos(id); // llamar  a la funcion para elimina
+    setProductos(productos.filter((element) => element.id !== id));
+  };
+  const editarProducto = async ( productoEditado) => {
+    try {
+      await editarProductos( productoEditado);
+      mostrarProductos();
+    } catch (error) {
+      console.error("Error al editar el producto:", error);
+    }
+  };
   return (
     <div>
       <div>
@@ -43,7 +54,7 @@ const productsMainContent = ({ productos1 }) => {
             <Card.Body style={{ width: "auto" }}>
               Descripción: {producto.descripcion}
             </Card.Body>
-            <button>Editar</button>
+            <button onClick={editarProducto(producto)}>Editar</button>
             <button
               onClick={() => {
                 eliminarProducto(producto.id);
@@ -71,7 +82,7 @@ const productsMainContent = ({ productos1 }) => {
           <Card.Body style={{ width: "auto" }}>
             Descripción: {producto.descripcion}
           </Card.Body>
-          <button>Editar</button>
+          <button onClick={editarProducto(producto)}>Editar</button>
           <button
             onClick={() => {
               eliminarProducto(producto.id);

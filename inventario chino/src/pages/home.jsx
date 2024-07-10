@@ -1,5 +1,5 @@
 import React from "react";
-import HomeNav from "../components/HomeStructures/homeNav";
+import HomeNav from "../components/HomeStructures/HomeNav";
 import HomeCarousel from "../components/HomeStructures/homeCarousel";
 import HomeSection from "../components/HomeStructures/homeSection/homeSection";
 import HomeSectionSecond from "../components/HomeStructures/homeSection/homeSectionSecond";

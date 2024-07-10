@@ -95,64 +95,19 @@
       "nombre": "Dober",
       "correo": "Ranger@gmail.com",
       "contrasena": "12345"
+    },
+    {
+      "id": "d2da",
+      "nombre": "Alex",
+      "correo": "alexander@gmail.com",
+      "contrasena": "12345"
+    },
+    {
+      "id": "f570",
+      "nombre": "Davani",
+      "correo": "davani@gmail.com",
+      "contrasena": "12345"
     }
   ],
-  "productos": [
-    {
-      "id": "c36b",
-      "nombre": "Barry",
-      "categoria": "Dios",
-      "precio": "Infinito",
-      "descripcion": "Dios terrenal"
-    },
-    {
-      "id": "e357",
-      "nombre": "csdcsdc",
-      "categoria": "vvxc",
-      "precio": "vvxc",
-      "descripcion": "cdscs"
-    },
-    {
-      "id": "3eb3",
-      "nombre": "aaaaaaaaa",
-      "categoria": "aaaaaaa",
-      "precio": "aaaaaaaa",
-      "descripcion": "aaaaaaaaaa"
-    },
-    {
-      "id": "31a3",
-      "nombre": "bbbbbbb",
-      "categoria": "bbbbbbbbbbbbbbb",
-      "precio": "bbbbbbbbb",
-      "descripcion": "bbbbbbbbbbbbbbbbbb"
-    },
-    {
-      "id": "1b25",
-      "nombre": "ccccccccccc",
-      "categoria": "ccccccccccccccccc",
-      "precio": "cccccccccccccc",
-      "descripcion": "cccccccccccccccc"
-    },
-    {
-      "id": "0bda",
-      "nombre": "dddddddddddd",
-      "categoria": "ddddddddddddd",
-      "precio": "ddddddddddd",
-      "descripcion": "ddddddddddddd"
-    },
-    {
-      "id": "83a2",
-      "nombre": "eeeeeeeeeee",
-      "categoria": "eeeeeeeeeeee",
-      "precio": "eeeeeeeeeeeee",
-      "descripcion": "eeeeeeeeeeeee"
-    },
-    {
-      "id": "b3c2",
-      "nombre": "monica",
-      "categoria": "papas",
-      "precio": "1000000000000000",
-      "descripcion": "ricas papas de la tia monica"
-    }
-  ]
+  "productos": []
 }

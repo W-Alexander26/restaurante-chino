@@ -42,9 +42,16 @@ export const borrarProductos = async (id) => {
   }
 };
 
-export const editarProductos = async (id) => {
+export const editarProductos = async (id,nombreProducto,categoriaProducto,precioProducto,descripcionProducto) => {
   try {
-    const url = "http://localhost:3001/productos/";
+    
+    const url = ( `http://localhost:3001/productos/${id}`, {
+
+      nombre: nombreProducto,
+      categoria: categoriaProducto,
+      precio: precioProducto,
+      descripcion: descripcionProducto
+    });
     const response = await axios.put(url + id);
     return response.data;
   } catch (error) {

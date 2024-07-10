@@ -15,8 +15,29 @@
   width: 290px;
   height: 280px;
 }
-#textoChino {
-  font-size: 38px;
-  text-align: center;
+#div-texto {
+  display: grid;
   color: white;
+  text-align: center;
+}
+#Titulo {
+  font-size: 33px;
+}
+#Sub-Titulo {
+  font-size: 35px;
+  font-weight: bolder;
+}
+
+#textoChinoFinal {
+  font-size: 20px;
+}
+#boton{
+  margin: auto;
+  border-radius: 10px;
+  background-color: red;
+  padding: 10px;
+}
+#link{
+  text-decoration: none;
+  color:white;
 }

@@ -1,9 +1,16 @@
 #contenedorAbout {
-  display: grid;
-  grid-template-columns: 25% 75%;
+  display: flex;
+  justify-content:space-around;
   background-color: black;
 }
-#textabout{
+#Contenedor-Texto {
   color: white;
+  padding: 30px;
+}
+#Titulo {
+  font-size: 45px;
+  font-weight: bold;
+}
+#textabout {
   font-size: 22px;
 }
