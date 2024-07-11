@@ -1,6 +1,6 @@
 import React from "react";
 import "./aboutMainContent.css";
-
+//En este componente tenemos dentro de una función, el contenido de lo que viene siendo el tema del que se está hablando(Restaurante chino)
 const aboutMainContent = () => {
   return (
     <div id="contenedorAbout">

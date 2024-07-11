@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { guardaProductos } from "../../services/llamados";
 import { obtenerInformacionProductos } from "../../services/llamados";
-
+import Swal from "sweetalert2";
+//Componente que contiene el formulario y las validaciones para introducir los productos.
 const productsForm = ({ actualizarSearched }) => {
   const [nombreProducto, setNombreProducto] = useState("");
   const [categoriaProducto, setCategoriaProducto] = useState("");
   const [precioProducto, setPrecioProducto] = useState("");
   const [descripcionProducto, setDescripcionProducto] = useState("");
-
+//funcion que busca diferentes productos por medio del input categoria o nombre.
   const buscador = async () => {
     const data = await obtenerInformacionProductos();
     // console.log(data);
@@ -19,7 +20,7 @@ const productsForm = ({ actualizarSearched }) => {
     );
     actualizarSearched(resultadoBusqueda);
   };
-
+//funcion que se encarga de subir los datos al servidos al mismo tiempo que valida que no hayan espacios vacios.
   const subirDatosProductos = async () => {
     setNombreProducto("");
     setCategoriaProducto("");
@@ -32,7 +33,7 @@ const productsForm = ({ actualizarSearched }) => {
       descripcionProducto.trim() === "" ||
       precioProducto.trim() === ""
     ) {
-      alert("Tienes que llenar todos los espacios"); //implementar sweet alert.
+      Swal.fire("Tienes que llenar todos los espacios")
       return;
     }
     try {

@@ -3,9 +3,11 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
+//importaciones necesarias de la librerá de react boostrap.
 
 const product = () => {
   return (
+    //Etiquetas que muestran el tipo de navbar en todas las páginas.
     <div>
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container>

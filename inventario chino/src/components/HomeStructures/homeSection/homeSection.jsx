@@ -1,6 +1,6 @@
 import React from "react";
 import "./homeSection.css";
-
+//En este componente se encuentran algunas imagenes que constituyen contenido a la página.
 const homeSection = () => {
   return (
     <div id="twoimg-onetext">

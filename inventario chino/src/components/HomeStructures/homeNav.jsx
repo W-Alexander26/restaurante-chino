@@ -3,9 +3,11 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
+//importaciones necesarias de la librerá de react boostrap.
 
 function homeNav() {
   return (
+    //Etiquetas que muestran el tipo de navbar en todas las páginas.
     <>
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container>
@@ -19,8 +21,6 @@ function homeNav() {
                 <NavDropdown.Item href="/register">Registrate</NavDropdown.Item>
                 <NavDropdown.Item href="/login">Inicia sesión</NavDropdown.Item>
                 <NavDropdown.Item href="/product">Productos</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">Hola</NavDropdown.Item>
               </NavDropdown>
             </Nav>
           </Navbar.Collapse>
