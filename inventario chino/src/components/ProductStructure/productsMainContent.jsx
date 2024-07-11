@@ -6,14 +6,11 @@ import {
   borrarProductos,
   editarProductos,
 } from "../../services/llamados";
+//componente encargado de mostrar la informacion de los productos dentro de un card y mostrarlos tanto en la pagina de productos como en el home.
 
-const productsMainContent = ({ productos1 }) => {
+const productsMainContent = ({ productos1 }) => {//funcion que almacena un array vacio donde tendra los datos del servidor en "data".
   const [productos, setProductos] = useState([]);
 
-  useEffect(() => {
-    mostrarProductos();
-  }, []);
-  // mostrarProductos();
   const mostrarProductos = async () => {
     try {
       const data = await obtenerInformacionProductos();
@@ -23,14 +20,21 @@ const productsMainContent = ({ productos1 }) => {
     }
   };
 
-  const eliminarProducto = async (id) => {
+  useEffect(() => {
+    mostrarProductos();
+  }, []);
+  mostrarProductos();
+
+  const eliminarProducto = async (id) => {//funcion para eliminar los productos obteniendo su id
     await borrarProductos(id); // llamar  a la funcion para elimina
     setProductos(productos.filter((element) => element.id !== id));
   };
-  const editarProducto = async ( productoEditado) => {
+
+  const editarProducto = async (productoEditado) => {//funcion que edita los productos mediante un parametro enviado entre esta funcion y el componente llamados. (PUT)
     try {
-      await editarProductos( productoEditado);
-      mostrarProductos();
+      await editarProductos(productoEditado);
+      console.log("hola");
+      // mostrarProductos();
     } catch (error) {
       console.error("Error al editar el producto:", error);
     }
@@ -38,7 +42,7 @@ const productsMainContent = ({ productos1 }) => {
   return (
     <div>
       <div>
-        {productos1.map((producto, index) => (
+        {productos1.map((producto, index) => (//mapeamos todo los productos para poderlos mostrar
           <Card key={index} style={{ width: "18rem", margin: "10px" }}>
             <Card.Img
               variant="top"
@@ -54,11 +58,11 @@ const productsMainContent = ({ productos1 }) => {
             <Card.Body style={{ width: "auto" }}>
               Descripción: {producto.descripcion}
             </Card.Body>
-            <button onClick={editarProducto(producto)}>Editar</button>
+            <button onClick={()=>editarProducto(producto)}>Editar</button>
             <button
               onClick={() => {
                 eliminarProducto(producto.id);
-              }}
+              }}//dentro de cada boton se envia las funciones necesarias para borrar y editar el producto.
             >
               Eliminar
             </button>
@@ -66,7 +70,7 @@ const productsMainContent = ({ productos1 }) => {
         ))}
       </div>
 
-      {productos.map((producto, index) => (
+      {productos.map((producto, index) => (//mapeamos todo los productos para poderlos mostrar
         <Card key={index} style={{ width: "18rem", margin: "10px" }}>
           <Card.Img
             variant="top"
@@ -82,11 +86,11 @@ const productsMainContent = ({ productos1 }) => {
           <Card.Body style={{ width: "auto" }}>
             Descripción: {producto.descripcion}
           </Card.Body>
-          <button onClick={editarProducto(producto)}>Editar</button>
+          <button onClick={()=>editarProducto(producto)}>Editar</button>
           <button
             onClick={() => {
               eliminarProducto(producto.id);
-            }}
+            }}//dentro de cada boton se envia las funciones necesarias para borrar y editar el producto.
           >
             Eliminar
           </button>

@@ -10,7 +10,11 @@ body {
 }
 #div-inputs {
   width: 400px;
-  background: linear-gradient(158deg, rgba(18,18,18,1) 0%, rgba(22,11,0,1) 92%);
+  background: linear-gradient(
+    158deg,
+    rgba(18, 18, 18, 1) 0%,
+    rgba(22, 11, 0, 1) 92%
+  );
   background-color: black;
   padding: 30px;
   margin: auto;
@@ -20,6 +24,7 @@ body {
 }
 .titulo {
   color: white;
+  text-align: center;
 }
 .inputs {
   width: 100%;

@@ -1,6 +1,6 @@
 import axios from "axios";
-
-export async function obtenerInformacionDatos() {
+//compente que interactua con el servidor, enviando datos, recibiendolos, editandolos y borrando (CRUD)
+export async function obtenerInformacionDatos() {//funcion que obtiene la informacion de los usuarios
   try {
     const url = "http://localhost:3001/users";
     const response = await axios.get(url);
@@ -11,7 +11,7 @@ export async function obtenerInformacionDatos() {
   }
 }
 
-export async function guardaProductos(infoProductos) {
+export async function guardaProductos(infoProductos) {//funcion que guarda los productos
   try {
     const url = "http://localhost:3001/productos"; // declaramos una variable que contendrá la url del json server
     const response = await axios.post(url, infoProductos); // declaramos otra variable que va a contener la promesa axios
@@ -21,7 +21,7 @@ export async function guardaProductos(infoProductos) {
     alert("Error al guardar producto");
   }
 }
-export async function obtenerInformacionProductos() {
+export async function obtenerInformacionProductos() {//funcion que obtiene los productos
   try {
     const url = "http://localhost:3001/productos";
     const response = await axios.get(url);
@@ -31,7 +31,7 @@ export async function obtenerInformacionProductos() {
     console.error("Error al cargar datos:", error);
   }
 }
-export const borrarProductos = async (id) => {
+export const borrarProductos = async (id) => {//funcion que borra los productos.
   try {
     const url = "http://localhost:3001/productos/";
     const response = await axios.delete(url + id);
@@ -42,23 +42,14 @@ export const borrarProductos = async (id) => {
   }
 };
 
-export const editarProductos = async (id,nombreProducto,categoriaProducto,precioProducto,descripcionProducto) => {
+export const editarProductos = async (producto) => {//funcion que edita los productos.
   try {
-    
-    const url = ( `http://localhost:3001/productos/${id}`, {
-
-      nombre: nombreProducto,
-      categoria: categoriaProducto,
-      precio: precioProducto,
-      descripcion: descripcionProducto
-    });
-    const response = await axios.put(url + id);
+    console.log(producto);
+    const url = `http://localhost:3001/productos/${producto.id}`;
+    const response = await axios.put(url,producto);
     return response.data;
   } catch (error) {
     console.error("Error al eliminar el producto:", error);
     throw error;
   }
 };
-
-
-
