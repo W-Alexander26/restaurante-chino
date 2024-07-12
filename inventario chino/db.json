@@ -109,38 +109,19 @@
       "contrasena": "12345"
     },
     {
-      "id": "e143",
-      "nombre": "Monica",
-      "correo": "Monica@gmail.com",
-      "contrasena": "Iloveyou"
-    },
-    {
-      "id": "42a6",
-      "nombre": "Yacith",
-      "correo": "yacith@gmail.com",
-      "contrasena": "12345"
-    },
-    {
-      "id": "dcc7",
-      "nombre": "Thiago",
-      "correo": "Thiago@gmail.com",
-      "contrasena": "12345"
+      "id": "c59b",
+      "nombre": "Keylor",
+      "correo": "Keylor@gmail.com",
+      "contrasena": "1234"
     }
   ],
   "productos": [
     {
-      "id": "b8fa",
-      "nombre": "eeeeeeee",
-      "categoria": "eeeeeeeeee",
-      "precio": "eeeeeeeeee",
-      "descripcion": "eeeeeeeeeeeeee"
-    },
-    {
-      "id": "7492",
-      "nombre": "aaaaaaaaa",
-      "categoria": "aaaaaaaaaaaaa",
-      "precio": "aaaaaaaaaaaa",
-      "descripcion": "aaaaaaaaaaaaaaaaaaaaaaa"
+      "id": "cdfc",
+      "nombre": "aaaaaa",
+      "categoria": "aaaaaaaaa",
+      "precio": "aaaaaaaaa",
+      "descripcion": "aaaaaaa"
     }
   ]
 }
