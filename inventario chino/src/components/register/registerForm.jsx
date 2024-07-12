@@ -31,7 +31,7 @@ const Register = () => {
       );
       if (usuariosRegistrado) {
         Swal.fire(
-          "Este usuario ya existe, intenta uilizar otro."
+          "Este usuario ya existe, intenta utilizar otro."
         );
         return;
       }
